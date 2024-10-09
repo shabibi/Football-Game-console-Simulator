@@ -11,7 +11,8 @@ namespace FotballGame
     {
         //Attributes:
         public string Name;
-        Player[] PlayerList = new Player[11];
+        public Player[] PlayerList = new Player[11];
+        public int score = 0;
 
         //Constructor
         public Team(string name)
@@ -19,7 +20,7 @@ namespace FotballGame
             Name = name;
         }
 
-        //Methods
+        //Method
         public void AssignPlayer(string[] TeamNames)
         {
             Random random = new Random();
