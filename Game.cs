@@ -40,8 +40,9 @@ namespace FotballGame
             else
             {
                 goal = false;
-            }
-        }
 
+            }
+
+        }
     }
 }
