@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FotballGame
 {
-    public abstract class Player
+    public  class Player
     {
         // Attributes:
         public string playerName;
