@@ -26,13 +26,13 @@ namespace FotballGame
             //Calculate total values of Goalkeeper and Defender skill level for second team
             for (int i = 0; i < team2.PlayerList.Length; i++)
             {
-                if ((team1.PlayerList[i].position == Positions.Goalkeeper) || (team1.PlayerList[i].position == Positions.Defender))
+                if ((team2.PlayerList[i].position == Positions.Goalkeeper) || (team2.PlayerList[i].position == Positions.Defender))
                 {
                     totalDefendValue += team2.PlayerList[i].skillLevel;
                 }
             }
             // check the attack result 
-            if (totalAttackValue > totalDefendValue)
+            if (totalAttackValue  > totalDefendValue)
             {
                 goal = true;
                 team1.score += 1;
@@ -45,6 +45,7 @@ namespace FotballGame
                 Console.Write("Defended successfuly!");
             }
             Console.WriteLine($" Score: {team1.score} | {team2.score}");
+            
         }
 
         
