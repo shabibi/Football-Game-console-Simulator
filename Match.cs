@@ -10,12 +10,12 @@ namespace FotballGame
     {
         public int CoinsTose;
         public int round;
+        private int start , rounded;
         public Team team1 = new Team();
         public Team team2 = new Team();
         public int getCoinsTose()
         {
-            Random random = new Random();
-            CoinsTose = random.Next(1, 3);
+         
             Console.WriteLine(CoinsTose);
             return CoinsTose;
         }
@@ -38,10 +38,13 @@ namespace FotballGame
             return round;
         }
 
-        public void StartGame()
+        public void startingGame()
         {
-            int start = getCoinsTose();
-            int rounded = getRound();
+            start = getCoinsTose();
+            rounded = getRound();
+        }
+        public void firstHalf()
+        {
             if (start == 1)
             {
                 for (int i = 0; i < rounded; i++)
@@ -70,7 +73,9 @@ namespace FotballGame
                     }
                 }
             }
-
+        }
+        public void secondHalf()
+        {
             //Second Half
             if (start == 1)
             {
