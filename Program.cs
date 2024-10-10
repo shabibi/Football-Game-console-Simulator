@@ -1,4 +1,6 @@
-﻿namespace FotballGame
+﻿using System.Data.SqlTypes;
+
+namespace FotballGame
 {
     internal class Program
     {
@@ -18,6 +20,8 @@
             Console.WriteLine();
 
             Console.WriteLine("Generating player for both teams...\n");
+
+            //Assign Names to Team1 and Display players information
             match.team1.AssignPlayer(Teem1Names);
             Team team1Player = new Team();
             team1Player.PlayerList = match.team1.PlayerList;
@@ -27,6 +31,8 @@
                 Console.WriteLine($"{ i + 1}.{team1Player.PlayerList[i].playerName} - {team1Player.PlayerList[i].position} (Skill: {team1Player.PlayerList[i].skillLevel}) ");
             }
             Console.WriteLine();
+
+            //Assign Names to Team2 and Display players information
             match.team2.AssignPlayer(Teem2Names);
             Team team2Player = new Team();
             team2Player.PlayerList = match.team2.PlayerList;
@@ -36,7 +42,13 @@
                 Console.WriteLine($"{i + 1}.{team2Player.PlayerList[i].playerName} - {team2Player.PlayerList[i].position} (Skill: {team2Player.PlayerList[i].skillLevel}) ");
             }
 
-            match.StartGame();
+            //Start the Game
+            match.startingGame();
+
+            //Get and Display The Starting Team
+            Team StartingTeam = new Team();
+            StartingTeam = match.getStartingTeam();
+            Console.WriteLine($"Coins toss.. Team {StartingTeam.Name} will start the game");
         }
     }
 }
