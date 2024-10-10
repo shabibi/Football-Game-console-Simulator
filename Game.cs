@@ -9,8 +9,6 @@ namespace FotballGame
 {
     public class Game
     {
-        public bool goal = false;
-
         public void attack(Team team1, Team team2)
         {
             int totalAttackValue = 0, totalDefendValue = 0;
@@ -32,16 +30,13 @@ namespace FotballGame
                 }
             }
             // check the attack result 
-            if (totalAttackValue  > totalDefendValue)
+            if (totalAttackValue +10  > totalDefendValue)
             {
-                goal = true;
                 team1.score += 1;
                 Console.Write($"Goal!");
-                
             }
             else
             {
-                goal = false;
                 Console.Write("Defended successfuly!");
             }
             Console.WriteLine($" Score: {team1.score} | {team2.score}");

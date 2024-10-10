@@ -60,6 +60,17 @@ namespace FotballGame
 
         }
 
-      
+        public void DisplayingPlayersInfo()
+        {
+            Console.WriteLine("{0, -5} {1, -20} {2, -15} {3, -10}", "No.", "Player Name", "Position", "Skill Level");
+            for (int i = 0; i < PlayerList.Length; i++)
+            {
+                Console.WriteLine("{0, -5} {1, -20} {2, -15} {3, -10}",
+                     i + 1,
+                     PlayerList[i].playerName,
+                     PlayerList[i].position,
+                     PlayerList[i].skillLevel);
+            }
+        }
     }
 }

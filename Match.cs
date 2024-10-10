@@ -14,7 +14,6 @@ namespace FotballGame
         public Team team1 = new Team();
         public Team team2 = new Team();
      
-
         public void getStartingTeam()
         {
             Random random = new Random();
@@ -24,21 +23,19 @@ namespace FotballGame
             round = random.Next(1,6);
 
             if(start == 1)
-                Console.WriteLine($"Coins toss.. Team {team1} will start the game");
+                Console.WriteLine($"\nCoins toss.. Team {team1.Name} will start the game");
             else
-                Console.WriteLine($"Coins toss.. Team {team2} will start the game");
+                Console.WriteLine($"\nCoins toss.. Team {team2.Name} will start the game");
+
+            Console.WriteLine($"\nThis Game will generate {round} Turns");
 
         }
-       
-
-
         public void firstHalf()
         {
             if (start == 1)
             {
                 for (int i = 1; i <= round; i++)
                 {
-                    Console.Write($"Turn{i}: {team1.Name} ara attacking..");
                     if (i % 2 != 0)
                     {
                         Console.Write($"Turn{i}: {team1.Name} ara attacking..");
@@ -104,9 +101,6 @@ namespace FotballGame
                 }
             }
         }
-
-   
-
         public void DisplayResult()
         {
             Console.WriteLine("\nFinal Score:");
