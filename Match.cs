@@ -10,15 +10,26 @@ namespace FotballGame
     {
         public int CoinsTose;
         public int round;
-        public Team team1 = new Team("Team1");
-        public Team team2 = new Team("Team2");
+        public Team team1 = new Team();
+        public Team team2 = new Team();
         public int getCoinsTose()
         {
             Random random = new Random();
-            CoinsTose = random.Next(1, 2);
+            CoinsTose = random.Next(1, 3);
+            Console.WriteLine(CoinsTose);
             return CoinsTose;
         }
 
+        public Team getStartingTeam()
+        {
+            Team team = new Team();
+            if(CoinsTose == 1)
+                team = team1;
+            else
+                team = team2;
+
+            return team;
+        }
         public int getRound()
         {
             Random random = new Random();
@@ -90,5 +101,7 @@ namespace FotballGame
                 }
             }
         }
+
+        
     }
 }
