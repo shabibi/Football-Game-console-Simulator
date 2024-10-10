@@ -49,6 +49,15 @@ namespace FotballGame
             Team StartingTeam = new Team();
             StartingTeam = match.getStartingTeam();
             Console.WriteLine($"Coins toss.. Team {StartingTeam.Name} will start the game");
+
+            //Starting First Half
+            Console.WriteLine("----First Half----\n");
+            match.firstHalf();
+
+            //Starting Second Half
+            Console.WriteLine("----Second Half----\n");
+            match.secondHalf();
+
         }
     }
 }

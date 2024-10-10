@@ -47,28 +47,33 @@ namespace FotballGame
         {
             if (start == 1)
             {
-                for (int i = 0; i < rounded; i++)
+                for (int i = 1; i <= rounded; i++)
                 {
+                    Console.Write($"Turn{i}: {team1.Name} ara attacking..");
                     if (i % 2 != 0)
                     {
+                        Console.Write($"Turn{i}: {team1.Name} ara attacking..");
                         attack(team1, team2);
                     }
                     else
                     {
+                        Console.Write($"Turn{i}: {team2.Name} ara attacking..");
                         attack(team2, team1);
                     }
                 }
             }
             else
             {
-                for (int i = 0; i < rounded; i++)
+                for (int i = 1; i <= rounded; i++)
                 {
                     if (i % 2 != 0)
                     {
+                        Console.Write($"Turn{i}: {team2.Name} ara attacking..");
                         attack(team2, team1);
                     }
                     else
                     {
+                        Console.Write($"Turn{i}: {team1.Name} ara attacking..");
                         attack(team1, team2);
                     }
                 }
@@ -79,28 +84,32 @@ namespace FotballGame
             //Second Half
             if (start == 1)
             {
-                for (int i = 0; i < rounded; i++)
+                for (int i = 1; i <= rounded; i++)
                 {
                     if (i % 2 != 0)
                     {
+                        Console.Write($"Turn{i}: {team2.Name} ara attacking..");
                         attack(team2, team1);
                     }
                     else
                     {
+                        Console.Write($"Turn{i}: {team1.Name} ara attacking..");
                         attack(team1, team2);
                     }
                 }
             }
             else
             {
-                for (int i = 0; i < rounded; i++)
+                for (int i = 1; i <= rounded; i++)
                 {
                     if (i % 2 != 0)
                     {
+                        Console.Write($"Turn{i}: {team1.Name} ara attacking..");
                         attack(team1, team2);
                     }
                     else
                     {
+                        Console.Write($"Turn{i}: {team2.Name} ara attacking..");
                         attack(team2, team1);
                     }
                 }

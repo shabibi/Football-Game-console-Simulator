@@ -36,13 +36,17 @@ namespace FotballGame
             {
                 goal = true;
                 team1.score += 1;
+                Console.Write($"Goal!");
+                
             }
             else
             {
                 goal = false;
-
+                Console.Write("Defended successfuly!");
             }
-
+            Console.WriteLine($" Score: {team1.score} | {team2.score}");
         }
+
+        
     }
 }
