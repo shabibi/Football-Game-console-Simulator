@@ -45,7 +45,7 @@ namespace FotballGame
             {
                 PlayerPostion = Positions.Forward;
                 //generate Random Skill level for Team1 player
-                skillLevel = random.Next(1, 100);
+                skillLevel = random.Next(1, 101);
                 PlayerList[i] = new Player(TeamNames[i], skillLevel, PlayerPostion);
             }
 
@@ -60,17 +60,6 @@ namespace FotballGame
 
         }
 
-        public Player[] GetInfo(Player[] players )
-        {
-            for (int i = 0; i < players.Length; i++)
-            {
-                players[i].playerName = PlayerList[i].playerName;
-                players[i].position = PlayerList[i].position;
-                players[i].skillLevel = PlayerList[i].skillLevel;
-            }
-            return players;
-        }
-
-
+      
     }
 }
