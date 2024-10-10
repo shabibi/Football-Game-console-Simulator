@@ -15,9 +15,9 @@ namespace FotballGame
         public int score = 0;
 
         //Constructor
-        public Team(string name)
+        public string getTeamName(string name)
         {
-            Name = name;
+            return Name = name;
         }
 
         //Method
@@ -58,7 +58,17 @@ namespace FotballGame
                 PlayerList[i] = new Player(TeamNames[i], skillLevel, PlayerPostion);
             }
 
+        }
 
+        public Player[] GetInfo(Player[] players )
+        {
+            for (int i = 0; i < players.Length; i++)
+            {
+                players[i].playerName = PlayerList[i].playerName;
+                players[i].position = PlayerList[i].position;
+                players[i].skillLevel = PlayerList[i].skillLevel;
+            }
+            return players;
         }
 
 
